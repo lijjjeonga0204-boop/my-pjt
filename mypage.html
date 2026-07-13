@@ -356,11 +356,11 @@
         }
         .stat-value span { color: var(--point-coral); }
 
-        /* 인용구 박스 (Quote Box) */
+        /* 인용구 박스 (Quote Box) - 중앙 정렬 버전 */
         .quote-box {
             position: relative;
-            padding: 30px 40px;
-            margin: 30px 0;
+            padding: 30px 40px;           /* 텍스트가 박스 안에서 여유 있게 보이도록 패딩 조정 */
+            margin: 30px auto;            /* 상하 여백 30px, 좌우 auto로 설정하여 중앙 정렬 */
             background: linear-gradient(135deg, var(--bg-card), var(--bg-dark));
             border-radius: 16px;
             font-family: var(--font-serif);
@@ -368,12 +368,15 @@
             color: var(--text-light);
             line-height: 1.8;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;           /* 내부 텍스트 중앙 정렬 */
         }
+
+        /* 따옴표 아이콘 위치 조정 */
         .quote-box::before {
             content: '"';
             position: absolute;
             top: 10px;
-            left: 20px;
+            left: 9%;
             font-size: 4rem;
             color: var(--point-coral);
             opacity: 0.3;
@@ -598,7 +601,7 @@
                         <p><strong>납골당의 어린왕자</strong> (장르: SF판타지)</p>
                         <p>기술이 발달한 미래, 사람이 죽어서도 가상세계를 '사후세계' 삼아 살아가는 세상입니다. 이 세상에서 주인공은 자신의 신체를 팔고 사후세계로 들어갑니다. 문제는 돈이 있어야 사후세계를 유지할 수 있습니다. 그리하여 주인공은 좀비게임 스트리밍을 시작합니다.</p>
                         <p style="color: var(--text-light); margin-top: 20px;"><strong>좋아하는 이유:</strong><br>
-                        죽음과 황금만능주의, 그리고 인간의 존재 가치에 대해 철학적으로 고민해볼 수 있어 좋아합니다. 철학책처럼 어려운 내용이 아니라 스토리텔링으로 가볍게 즐겨보는 철학이라고 생각합니다. 고찰과 사유할 주제를 던져주는 책입니다.</p>
+                        죽음과 황금만능주의, 그리고 인간의 존재 가치에 대해 철학적으로 고민해볼 수 있어 좋아합니다. 철학책처럼 어려운 내용이 아니라 스토리텔링으로 가볍게 즐겨보는 철학이라고 생각합니다. <br>고찰과 사유할 주제를 던져주는 책입니다.</p>
                     </div>
                 </div>
 
@@ -612,7 +615,7 @@
                         <p><strong>즐겨보는 게임:</strong> 데드 스페이스</p>
                         <p><strong>분위기:</strong> SF 장르를 기반으로 한 대표적인 서바이벌 호러(공포) 게임</p>
                         <p style="color: var(--text-light); margin-top: 20px;">
-                            "직접 하기는 무섭지만, 남이 플레이하는 걸 보면서 긴장감과 스토리를 즐깁니다. 가장 안전한 방 안에서 오싹한 도파민을 충전하는 저만의 방법이죠."
+                            "직접 하기는 무섭지만, 남이 플레이하는 걸 보면서 <br>긴장감과 스토리를 즐깁니다. 가장 안전한 방 안에서 오싹한 도파민을 충전하는 저만의 방법이죠."
                         </p>
                     </div>
                 </div>
@@ -632,7 +635,7 @@
                     </div>
                     <div class="text-content">
                         <h4>가장 안정적인 장소, 침대</h4>
-                        <p>침대는 단순히 쉬는 공간이 아니라, <br>내가 가장 편안해지는 안전지대입니다. 누워 있는 시간은 생각을 비우거나, 오히려 많은 생각을 정리하는 시간이 되기도 합니다.</p>
+                        <p>침대는 단순히 쉬는 공간이 아니라, <br>내가 가장 편안해지는 안전지대입니다. <br>누워 있는 시간은 생각을 비우거나, 오히려 많은 생각을 정리하는 시간이 되기도 합니다.</p>
                         
                         <!-- 카운터 애니메이션 박스 (너비 확장됨) -->
                         <div class="stat-box">
@@ -653,17 +656,17 @@
                     </div>
                     <div class="text-content">
                         <h4>침대가 조금 지겨워질 때는 걷습니다</h4>
-                        <p>한참 누워 있다가 답답해지면 가볍게 산책을 합니다. 걷는 동안 머릿속이 정리되고, 주변 풍경이나 동물을 보는 것만으로도 기분이 환기됩니다.</p>
+                        <p>한참 누워 있다가 답답해지면 가볍게 산책을 합니다. <br>걷는 동안 머릿속이 정리되고, 주변 풍경이나 동물을 보는 것만으로도 기분이 환기됩니다.</p>
                     </div>
                 </div>
 
                 <!-- 3) 오케스트라 (단일 블록) -->
                 <div class="single-card fade-up">
                     <h4 class="serif-text">♪ 조용히 몰입하는 선율</h4>
-                    <p><strong>[입력: 좋아하는 오케스트라 이름]</strong></p>
-                    <p style="margin-bottom: 20px;">[입력: 좋아하는 이유 1~2문장을 적어주세요. 예: 현악기들이 쌓아 올리는 장엄한 소리를 듣고 있으면 마음이 웅장해집니다.]</p>
+                    <p><strong>프랑스 국립 오케스트라</strong></p>
+                    <p style="margin-bottom: 20px;">부천아트센터에서 부천시민 혜택으로 할인받아 싸게 즐길 수 있는 문화생활입니다.<br>웅장한 소리가 심장을 울리는 감각을 좋아합니다.</p>
                     <div style="display: inline-block; background: var(--bg-dark); padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; color: var(--text-muted);">
-                        인상적인 곡: [입력: 작품명 또는 곡명]
+                        인상적인 곡: 생상스 - 교향곡 3번 c단조, Op.78 "오르간"
                     </div>
                 </div>
             </section>
@@ -700,7 +703,7 @@
                     <div class="text-content">
                         <h4>마음의 구조를 파헤치는 독서</h4>
                         <p><strong>도서명:</strong> 우리는 각자의 세계가 된다 (저자: 데이비드 이글먼)</p>
-                        <p>[입력: 책이 왜 인상 깊었는지 2~3문장으로 설명해주세요.]</p>
+                        <p>뇌과학을 통해 인간의 사고, 감정, 의식에 대한 이해를 깊이 있게 해줍니다.</p>
                     </div>
                 </div>
                 
