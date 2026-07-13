@@ -283,15 +283,35 @@
             text-transform: uppercase;
         }
 
-        /* 실제 이미지 스타일 추가 */
+        /* 이미지 박스 공통 스타일 (핵심: 모서리와 배경 처리) */
+        .img-box {
+            padding: 20px;            /* 박스와 이미지 사이 여백 */
+            border-radius: 20px;      /* 박스 자체에 둥근 모서리 적용 */
+            overflow: hidden;         /* 이 속성이 있어야 배경색이 모서리 밖으로 안 나갑니다 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* 그림자 유지 */
+        }
+
+        /* 실제 이미지 스타일 */
         .img-box img {
             width: 100%;
-            height: auto; /* 고정 높이에서 auto로 변경하여 원본 비율 유지 */
-            max-height: 450px; /* 세로로 과도하게 길어지는 것 방지 */
-            object-fit: contain; /* 이미지가 잘리지 않고 전부 보이도록 설정 */
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* 깊이감을 위한 그림자 */
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;     /* 이미지가 잘리지 않고 전체 표시 */
             display: block;
+            border-radius: 0;        /* 박스에서 둥글게 처리하므로 0으로 설정 */
+        }
+
+        /* 어두운 테마용 배경 (납골당의 어린왕자) */
+        .img-box-dark {
+            background-color: #000000; /* 블랙 계열 */
+        }
+
+        /* 밝은 테마용 배경 (책) */
+        .img-box-light {
+            background-color: #ffffff; /* 화이트 계열 */
         }
 
         /* 태그 뱃지 */
@@ -570,7 +590,7 @@
 
                 <!-- 1) 좋아하는 웹소설 -->
                 <div class="split-row fade-up">
-                    <div class="img-box">
+                    <div class="img-box img-box-dark">
                         <img src="novel.jpg" alt="납골당의 어린왕자 표지">
                     </div>
                     <div class="text-content">
@@ -674,7 +694,7 @@
 
                 <!-- 2) 뇌과학 책 -->
                 <div class="split-row reverse fade-up">
-                    <div class="img-box">
+                    <div class="img-box img-box-light">
                         <img src="book.jpg" alt="뇌과학 책">
                     </div>
                     <div class="text-content">
@@ -686,7 +706,7 @@
                 
                 <!-- 인용구 박스 -->
                 <div class="quote-box fade-up">
-                    지금 이 순간의 모습은 그 모든 변화의 합이다. 어제의 그 사람은 오늘과 아주 조금 달랐다. 그리고 내일은 또 다른 사람이 될 것이다.
+                    지금 이 순간의 모습은 그 모든 변화의 합이다. 어제의 그 사람은 오늘과 아주 조금 달랐다. <br><strong>그리고 내일은 또 다른 사람이 될 것이다.</strong>
                 </div>
 
                 <!-- 3) 성찰 문장 -->
